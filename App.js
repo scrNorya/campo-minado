@@ -12,6 +12,7 @@ export default class Mines extends Component {
           Tamanho da grade:
           {Params.getRowsAmount()}X{Params.getColumnsAmount()}
         </Text>
+
         <Field />
         <Field opened nearMines={1} />
         <Field opened nearMines={2} />
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
   titleText: {
     fontSize: 20,
