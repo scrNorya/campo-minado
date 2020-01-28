@@ -51,13 +51,13 @@ const getNeighbors = (board, row, column) => {
   const neighbors = [];
   const rows = [row - 1, row, row + 1];
   const columns = [column - 1, column, column + 1];
-  rows.forEach(rowElement => {
-    columns.forEach(columnElement => {
-      const different = rowElement !== row || columnElement !== column;
-      const validRow = rowElement >= 0 && rowElement < board.length;
-      const validColumn = columnElement >= 0 && columnElement <= board[0].lenth;
+  rows.forEach(r => {
+    columns.forEach(c => {
+      const different = r !== row || c !== column;
+      const validRow = r >= 0 && r < board.length;
+      const validColumn = c >= 0 && c < board[0].length;
       if (different && validRow && validColumn) {
-        neighbors.push(board[rowElement][columnElement]);
+        neighbors.push(board[r][c]);
       }
     });
   });

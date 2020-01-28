@@ -5,7 +5,13 @@ import Field from './components/Field';
 export default props => {
   const rows = props.board.map((row, rowI) => {
     const columns = row.map((field, columnI) => {
-      return <Field {...field} key={columnI} />;
+      return (
+        <Field
+          {...field}
+          key={columnI}
+          onOpen={() => props.onOpenField(rowI, columnI)}
+        />
+      );
     });
     return (
       <View style={styles.rowContainer} key={rowI}>
