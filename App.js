@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import Params from './src/params';
+import Field from './src/components/Field';
 
 export default class Mines extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class Mines extends Component {
           Tamanho da grade:
           {Params.getRowsAmount()}X{Params.getColumnsAmount()}
         </Text>
+        <Field />
       </View>
     );
   }
