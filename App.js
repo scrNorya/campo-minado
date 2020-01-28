@@ -20,6 +20,8 @@ export default class Mines extends Component {
         <Field mined />
         <Field mined opened />
         <Field mined opened exploded />
+        <Field flagged />
+        <Field opened flagged />
       </View>
     );
   }
