@@ -10,6 +10,7 @@ export default props => {
           {...field}
           key={columnI}
           onOpen={() => props.onOpenField(rowI, columnI)}
+          onSelect={() => props.onSelectField(rowI, columnI)}
         />
       );
     });

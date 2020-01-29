@@ -8,6 +8,7 @@ import {
   hadExplosion,
   wonGame,
   showMines,
+  invertFlag,
 } from './src/functions';
 import MineField from './src/MineField';
 
@@ -50,6 +51,18 @@ export default class Mines extends Component {
     this.setState({board, lost, won});
   };
 
+  handleOnSelectField = (row, column) => {
+    const board = cloneBoard(this.state.board);
+    invertFlag(board, row, column);
+    const won = wonGame(board);
+
+    if (won) {
+      Alert.alert('Ganhou');
+    }
+
+    this.setState({board, won});
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -62,6 +75,7 @@ export default class Mines extends Component {
           <MineField
             board={this.state.board}
             onOpenField={this.handleOnOpenField}
+            onSelectField={this.handleOnSelectField}
           />
         </View>
       </View>
