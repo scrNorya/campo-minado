@@ -24,7 +24,7 @@ export default props => {
           <DifficultSelectionButton
             style={styles.bgEasy}
             buttonLabel="Fácil"
-            onLevelSelected={() => props.onLevelSelected(0.01)}
+            onLevelSelected={() => props.onLevelSelected(0.1)}
           />
           <DifficultSelectionButton
             style={styles.bgNormal}
